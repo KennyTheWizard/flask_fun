@@ -1,0 +1,25 @@
+#wrapper{
+    background-color: lightblue;
+    width: 70%;
+    margin: auto;
+}
+
+#wrapper h1{
+    text-align: center;
+}
+
+#wrapper p{
+    text-align: center;
+}
+form{
+    display: inline-block;
+    margin: 0 13%;
+}
+
+#win{
+    color: green;
+}
+
+#lose{
+    color: red;
+}

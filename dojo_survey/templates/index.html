@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_sheet.css') }}">    
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form class="infoBox" action="/results" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Your Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="nameBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="location">Dojo Location:</label>
+                    </td>
+                    <td>
+                        <select name="location" id="locBox">
+                            <option value="Tulsa">Tulsa</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="San Francisco">San Francisco</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fav_lang">Favorite Language:</label>
+                    </td>
+                    <td>
+                        <select name="fav_lang" id="lanBox">
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="jQuery">jQuery</option>
+                        </select>
+                    </td>
+                </tr>                
+            </table>
+            <p>Comment(optional):</p>
+            <textarea name="comment" id="commBox" cols="30" rows="10"></textarea>
+            <input type="submit" value="Button">
+        </form>
+    </div>
+</body>
+</html>

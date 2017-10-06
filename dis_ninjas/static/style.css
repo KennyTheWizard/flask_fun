@@ -1,0 +1,15 @@
+#wrapper{
+    width: 70%;
+    background-color: lightgreen;
+    margin: 0 auto;
+}
+
+#wrapper h1{
+    text-align: center;
+}
+
+#turtle{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}

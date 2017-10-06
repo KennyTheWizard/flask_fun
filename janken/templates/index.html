@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">    
+    <title>Janken</title>
+</head>
+<body>
+    <p>Wins: {{session['wins']}}</p>
+    <p>Losses: {{session['losses']}}</p>
+    <p>Ties: {{session['ties']}}</p>
+    <div id="wrapper">
+        <h1>Rock Paper Scissors</h1>
+        <p id="{{session['result']}}">{{session['info']}}</p>
+        <div id="forms">
+            <form action="/play" method="post">
+                <input type="hidden" name="throw" value="rock">
+                <input type="submit" value="Rock">
+            </form>
+            <form action="/play" method="post">
+                <input type="hidden" name="throw" value="paper">
+                <input type="submit" value="Paper">
+            </form>
+            <form action="/play" method="post">
+                <input type="hidden" name="throw" value="scissors">
+                <input type="submit" value="Scissors">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_sheet.css') }}">    
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="infoBox">
+            <h3>Submitted Info</h3>
+            <table id="infoTable">
+                <tr>
+                    <td>Name:</td>
+                    <td>{{name}}</td>
+                </tr>
+                <tr>
+                    <td>Dojo Location:</td>
+                    <td>{{location}}</td>
+                </tr>
+                <tr>
+                    <td>Favorite Language:</td>
+                    <td>{{fav_lang}}</td>
+                </tr>
+                <tr>
+                    <td>Comment:</td>
+                    <td>{{comment}}</td>
+                </tr>
+                <form action="/"><input type="submit" value="Go Back"></form>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

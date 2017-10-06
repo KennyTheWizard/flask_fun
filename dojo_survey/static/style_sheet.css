@@ -1,0 +1,17 @@
+#wrapper{
+    width: 70%;
+    background-color: lightblue;
+    margin: 0 auto;
+}
+
+.infoBox{
+    width: 50%;
+    background-color: gold;
+    margin: 50px auto;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.infoBox h3{
+    text-decoration: underline;
+}
