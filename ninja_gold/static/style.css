@@ -1,0 +1,40 @@
+#wrapper{
+    width: 70%;
+    background-color: lightskyblue;
+    margin: 0 auto;
+}
+
+.buildBox{
+    width: 20%;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px 10px
+}
+
+.buildBox h1{
+    text-align: center;
+}
+
+.buildBox h4{
+    text-align: center;
+}
+
+#activityBox{
+    border: 1px solid black;
+}
+
+.buildBox form input{
+    margin: 0 36% 15px;
+
+}
+
+#activityBox p{
+    margin: 1px 0px;
+}
+.mademoney{
+    color: green;
+}
+
+.lostmoney{
+    color: red;
+}
