@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Guess my Number</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I've psuedorandomly generated a number between 1 and 100 try to guess it?</p>
+        {% if session['hint'] %}
+        <div id="mainCont" class="{{ session['hintBox'] }}">
+            <p id="hint">{{ session['hint'] }}</p>
+            {% if session['guessed'] %}
+            <form action="/reset" method="post">
+                <input type="submit" value="Play Again">
+            </form>
+            {% endif %}
+        </div>    
+        {% endif %}
+        {% if not session['guessed'] %}
+        <div id="formBox">
+            <form action="/guess" method="post">
+                <input type="number" name="number" id="numberBox">
+                <input type="submit" value="Take a Guess">
+            </form> 
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
