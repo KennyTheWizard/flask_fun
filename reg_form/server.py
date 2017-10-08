@@ -26,12 +26,12 @@ def process():
     name_match = re.compile(r"[a-zA-z]+$")
     input_valid = True
 
-    for key, value in info_dict.items():
-        print(key, value)
     # for key, value in info_dict.items():
-    #     if len(value) == 0:
-    #         input_valid = False
-    #         flash("The {} cannot be blank.".format(key))
+    #     print(key, value)
+    for key, value in info_dict.items():
+        if len(value) == 0:
+            input_valid = False
+            flash("The {} cannot be blank.".format(key))
     # if there are not blanks
     if input_valid:
         # check against the patterns we created
