@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_sheet.css') }}">    
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form class="infoBox" action="/results" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="firstName">First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstName" id="firstNameBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastName">Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="lastName" id="lastNameBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email_add">Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="email_add" id="emailBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bDay">Birthday (MM/DD/YYYY):</label>
+                    </td>
+                    <td>
+                        <input type="text" name="birthDay" id="bDayBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passWord">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="passWord" id="pwBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passWordConf">Password Confirmation:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="passWordConf" id="pwcBox">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>                
+            </table>
+        </form>
+    </div>
+</body>
+</html>
