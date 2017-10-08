@@ -14,21 +14,21 @@
             <table id="infoTable">
                 <tr>
                     <td>Name:</td>
-                    <td>{{name}}</td>
+                    <td>{{ session['name'] }}</td>
                 </tr>
                 <tr>
                     <td>Dojo Location:</td>
-                    <td>{{location}}</td>
+                    <td>{{ session['location'] }}</td>
                 </tr>
                 <tr>
                     <td>Favorite Language:</td>
-                    <td>{{fav_lang}}</td>
+                    <td>{{ session['fav_lang'] }}</td>
                 </tr>
                 <tr>
                     <td>Comment:</td>
-                    <td>{{comment}}</td>
+                    <td>{{ session['comment'] }}</td>
                 </tr>
-                <form action="/"><input type="submit" value="Go Back"></form>
+                <form action="/reset", method="POST"><input type="submit" value="Go Back"></form>
             </table>
         </div>
     </div>

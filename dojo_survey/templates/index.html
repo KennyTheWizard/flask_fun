@@ -9,6 +9,13 @@
 </head>
 <body>
     <div id="wrapper">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <form class="infoBox" action="/results" method="post">
             <table>
                 <tr>
@@ -44,7 +51,7 @@
                     </td>
                 </tr>                
             </table>
-            <p>Comment(optional):</p>
+            <p>Comment(mandatory):</p>
             <textarea name="comment" id="commBox" cols="30" rows="10"></textarea>
             <input type="submit" value="Button">
         </form>
